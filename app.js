@@ -4,7 +4,7 @@ console.log("Hello World!\n==========\n");
 console.log("EXERCISE 1:\n==========\n");
 
 for (let i = 0; i <= 100; i++) {
-  if (i % 2 != 0) {
+  if (i % 2 !== 0) {
     console.log(i);
   }
 }
@@ -13,18 +13,18 @@ for (let i = 0; i <= 100; i++) {
 console.log("EXERCISE 2:\n==========\n");
 let answer = "";
 
-for (let i = 0; i <= 100; i++) {
-  if (i % 3 == 0) {
-    answer = "FIZZ";
-    console.log(answer);
-  }
-  if (i % 5 == 0) {
-    answer = "BUZZ";
-    console.log(answer);
-  }
-  if (i % 3 == 0 && i % 5 == 0) {
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
     answer = "FIZZ" + "BUZZ";
-    console.log(answer);
+    console.log(`${i} ${answer}`);
+  } else if (i % 3 === 0) {
+    answer = "FIZZ";
+    console.log(`${i} ${answer}`);
+  } else if (i % 5 === 0) {
+    answer = "BUZZ";
+    console.log(`${i} ${answer}`);
+  } else {
+    console.log(`${i} is not divisible by 3 or 5`);
   }
 }
 
@@ -42,17 +42,17 @@ let numers = 0;
 let answer2 = "";
 do {
   numers++;
-  if (numers % 3 == 0) {
-    answer2 = "FIZZ";
-    console.log(answer2);
-  }
-  if (numers % 5 == 0) {
-    answer2 = "BUZZ";
-    console.log(answer2);
-  }
   if (numers % 3 == 0 && numers % 5 == 0) {
     answer2 = "FIZZ" + "BUZZ";
-    console.log(answer2);
+    console.log(`${numers} ${answer2}`);
+  } else if (numers % 3 == 0) {
+    answer2 = "FIZZ";
+    console.log(`${numers} ${answer2}`);
+  } else if (numers % 5 == 0) {
+    answer2 = "BUZZ";
+    console.log(`${numers} ${answer2}`);
+  } else {
+    console.log(`${numers} is not divisible by 3 or 5`);
   }
 } while (numers <= 100);
 
